@@ -17,6 +17,7 @@ import com.example.du_an_alone.DTO.DangNhap;
 import com.example.du_an_alone.R;
 import com.example.du_an_alone.SQLiteHelper.SQLife;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,6 +29,7 @@ public class ForgotPassWord extends AppCompatActivity {
     Button btnSave, btnCancel;
     ArrayList<DangNhap> list;
     String taiKhoan;
+    TextInputLayout ipTk, ipNewPass, ipRepass;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -40,6 +42,10 @@ public class ForgotPassWord extends AppCompatActivity {
         tvError = findViewById(R.id.forgot_tvError);
         btnCancel = findViewById(R.id.forgot_btnCancel);
         btnSave = findViewById(R.id.forgot_btnSave);
+        ipTk = findViewById(R.id.forgot_ipTk);
+        ipNewPass = findViewById(R.id.forgot_ipNewPass);
+        ipRepass = findViewById(R.id.forgot_ipRePass);
+
 
         list = new ArrayList<>();
         sqLife = new SQLife(this);
@@ -73,24 +79,42 @@ public class ForgotPassWord extends AppCompatActivity {
             }
         });
     }
+
     public int validate() {
         int check = 1;
-        if (newPass.getText().length() == 0 || user.getText().length() == 0 || rePass.getText().length() == 0) {
-            Toast.makeText(this, "Bạn phải nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+        if (user.getText().length() == 0) {
+            ipTk.setError("Tài khoản không được để trống");
             check = -1;
-        } else if (!newPass.getText().toString().equals(rePass.getText().toString())) {
-            Toast.makeText(this, "Mật khẩu không trùng khớp", Toast.LENGTH_SHORT).show();
-            check = -1;
-        }
-        if(user.getText().length()>0) {
+        } else if (user.getText().length() > 0) {
             if (!user.getText().toString().equals(taiKhoan)) {
-                tvError.setVisibility(View.VISIBLE);
-                return check =-1;
+                ipTk.setError("Tài khoản không tồn tại");
+                check = -1;
             } else {
-                tvError.setVisibility(View.GONE);
+                ipTk.setError(null);
             }
+        } else {
+            ipTk.setError(null);
         }
 
+        if (newPass.getText().length() == 0) {
+            ipNewPass.setError("Mật khẩu không được để trống");
+            check = -1;
+        } else if (newPass.getText().length() < 7) {
+            ipNewPass.setError("Mật khẩu phải dài hơn 8 kí tự");
+            check = -1;
+        } else {
+            ipNewPass.setError(null);
+        }
+
+        if (rePass.getText().length() == 0) {
+            ipRepass.setError("Nhập lại mật khẩu");
+            check = -1;
+        } else if (!newPass.getText().toString().equals(rePass.getText().toString())) {
+            ipRepass.setError("Mật khẩu không trùng khớp");
+            check = -1;
+        } else {
+            ipRepass.setError(null);
+        }
 
         return check;
     }

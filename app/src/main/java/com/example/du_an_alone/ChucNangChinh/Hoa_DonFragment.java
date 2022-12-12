@@ -63,8 +63,9 @@ public class Hoa_DonFragment extends Fragment {
     EditText edtmaHoaDon;
     HoaDon_Adapter adapter;
     int position;
-    TextView tvmaDichVu, tvMAKT, tvTONGTIENTHANHTOAN, tvNgayThu, errorNgayThu , tvTenKhachThue , tvMaPhong , tvTenPhong , tvTienPhong;
-    int maPhong , maKhachThue , tienPhong , maDichVu , TienDien , TienNuoc , TienVeSinh , TienGuiXe , TienWifi , TongTienThanhToan;
+    TextView tvmaDichVu, tvMAKT, tvTONGTIENTHANHTOAN, tvNgayThu, errorNgayThu, tvTenKhachThue, tvMaPhong, tvTenPhong, tvTienPhong, errorThangThu, errorP, errorDV, errorTT, tvTrangThai;
+    int maPhong, maKhachThue, tienPhong, maDichVu, TienDien, TienNuoc, TienVeSinh, TienGuiXe, TienWifi, TongTienThanhToan;
+
     public Hoa_DonFragment() {
     }
 
@@ -81,14 +82,14 @@ public class Hoa_DonFragment extends Fragment {
             @SuppressLint("MissingInflatedId")
             @Override
             public void onClick(View view) {
-                openDialog(getActivity() , 0);
+                openDialog(getActivity(), 0);
             }
         });
         lvHoaDon.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
                 hoaDon = listHoaDon.get(i);
-                openDialog(getActivity() , 1);
+                openDialog(getActivity(), 1);
                 return false;
             }
         });
@@ -100,7 +101,7 @@ public class Hoa_DonFragment extends Fragment {
     public void openDialog(final Context context, final int type) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         LayoutInflater inflater = getLayoutInflater();
-        TextView  tvTENKT,  tvMAP, tvTENP,  tvTrangThai, tvTienPhong, tvTienDien, tvTienNuoc, tvTienVeSinh, tvTienGiuXe, tvTienWifi;
+        TextView tvTENKT, tvMAP, tvTENP , tvTienPhong, tvTienDien, tvTienNuoc, tvTienVeSinh, tvTienGiuXe, tvTienWifi;
         View viewshow = inflater.inflate(R.layout.dialog_haodon, null);
         builder.setView(viewshow);
         AlertDialog alertDialog = builder.create();
@@ -121,6 +122,11 @@ public class Hoa_DonFragment extends Fragment {
         tvTienPhong = viewshow.findViewById(R.id.tvHD_TIENP_Add_HoaDon);
 
         edtmaHoaDon.setEnabled(false);
+
+        errorDV = viewshow.findViewById(R.id.dialogHoaDon_errorDV);
+        errorThangThu = viewshow.findViewById(R.id.dialogHoaDon_errorThangThu);
+        errorP = viewshow.findViewById(R.id.dialogHoaDon_errorP);
+        errorTT = viewshow.findViewById(R.id.dialogHoaDon_errorTT);
 
 
         tvmaDichVu = viewshow.findViewById(R.id.tvHD_MADV_Add);
@@ -203,7 +209,7 @@ public class Hoa_DonFragment extends Fragment {
                         tienPhong = listHopDong.get(i).getGiaPhong();
                         String tienPhongs = tvTienPhong.getText().toString();
                         tienPhongs += " " + tienPhong;
-                        tvTienPhong.setText(" " + tienPhongs + "VNĐ"    );
+                        tvTienPhong.setText(" " + tienPhongs + "VNĐ");
                         dialog1.dismiss();
                     }
                 });
@@ -293,7 +299,7 @@ public class Hoa_DonFragment extends Fragment {
             }
         });
         edtmaHoaDon.setEnabled(false);
-        if (type!=0){
+        if (type != 0) {
             edtmaHoaDon.setText(String.valueOf(hoaDon.getMaHoaDon()));
             tvMAKT.setText(String.valueOf(hoaDon.getMaKhachThue()));
             tvTENKT.setText(String.valueOf(hoaDon.getTenKhachThue()));
@@ -301,37 +307,38 @@ public class Hoa_DonFragment extends Fragment {
             tvTENP.setText(hoaDon.getTenPhong());
             tvMAP.setText(String.valueOf(hoaDon.getMaPhong()));
             tvTienPhong.setText(String.valueOf(hoaDon.getTienPhong()));
-//            tvmaDichVu.setText(String.valueOf(hoaDon.getMaDichVu()));
+            tvmaDichVu.setText(String.valueOf(hoaDon.getMaDichVu()));
             edtTenHopDong.setText(hoaDon.getTenHoaDon());
-//            tvTienDien.setText(String.valueOf(hoaDon.getSoDien()));
-//            tvTienNuoc.setText(String.valueOf(hoaDon.getSoDien()));
-//            tvTienVeSinh.setText(String.valueOf(hoaDon.getVeSinh()));
-//            tvTienGiuXe.setText(String.valueOf(hoaDon.getGuiXe()));
-//            tvTienWifi.setText(String.valueOf(hoaDon.getWifi()));
-//            tvTONGTIENTHANHTOAN.setText(String.valueOf());
+            tvTienDien.setText(String.valueOf("Tiền điện: " + hoaDon.getSoDien()));
+            tvTienNuoc.setText(String.valueOf("Tiền nước: " + hoaDon.getSoNuoc()));
+            tvTienVeSinh.setText(String.valueOf("Tiền vệ sinh: " + hoaDon.getVeSinh()));
+            tvTienGiuXe.setText(String.valueOf("Tiền gửi xe: " + hoaDon.getGuiXe()));
+            tvTienWifi.setText(String.valueOf("Tiền Wifi: " + hoaDon.getWifi()));
+            tvTONGTIENTHANHTOAN.setText(String.valueOf(hoaDon.getTongTienThanhToan()));
             btnSave.setText("updata");
         }
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                try {
-                    HoaDon hoaDon = new HoaDon();
-                    hoaDon.setTenHoaDon(edtTenHopDong.getText().toString());
-                    hoaDon.setMaPhong(maPhong);
-                    hoaDon.setTenPhong(tvTENP.getText().toString());
-                    hoaDon.setMaKhachThue(maKhachThue);
-                    hoaDon.setTenKhachThue(tvTENKT.getText().toString());
-                    hoaDon.setTienPhong(tienPhong);
-                    hoaDon.setMaDichVu(maDichVu);
-                    hoaDon.setSoDien(TienDien);
-                    hoaDon.setSoNuoc(TienNuoc);
-                    hoaDon.setVeSinh(TienVeSinh);
-                    hoaDon.setGuiXe(TienGuiXe);
-                    hoaDon.setWifi(TienWifi);
-                    hoaDon.setTongTienThanhToan(TongTienThanhToan);
-                    hoaDon.setTrangThai(tvTrangThai.getText().toString());
-                    hoaDon.setNgayThu(tvNgayThu.getText().toString());
-                    if (validate() > 0) {
+                if (validate() > 0) {
+                    try {
+                        HoaDon hoaDon = new HoaDon();
+                        hoaDon.setTenHoaDon(edtTenHopDong.getText().toString());
+                        hoaDon.setMaPhong(maPhong);
+                        hoaDon.setTenPhong(tvTENP.getText().toString());
+                        hoaDon.setMaKhachThue(maKhachThue);
+                        hoaDon.setTenKhachThue(tvTENKT.getText().toString());
+                        hoaDon.setTienPhong(tienPhong);
+                        hoaDon.setMaDichVu(maDichVu);
+                        hoaDon.setSoDien(TienDien);
+                        hoaDon.setSoNuoc(TienNuoc);
+                        hoaDon.setVeSinh(TienVeSinh);
+                        hoaDon.setGuiXe(TienGuiXe);
+                        hoaDon.setWifi(TienWifi);
+                        hoaDon.setTongTienThanhToan(TongTienThanhToan);
+                        hoaDon.setTrangThai(tvTrangThai.getText().toString());
+                        hoaDon.setNgayThu(tvNgayThu.getText().toString());
+
                         if (type == 0) {
                             if (dao.Insert(hoaDon)) {
                                 Toast.makeText(context, "Thêm thành công", Toast.LENGTH_SHORT).show();
@@ -349,11 +356,11 @@ public class Hoa_DonFragment extends Fragment {
                             }
                         }
                         capNhatLV();
+
+                    } catch (Exception e) {
+                        Toast.makeText(getActivity(), "Nhập Đúng", Toast.LENGTH_SHORT).show();
                     }
-//                }
-//                catch (Exception e) {
-//                    Toast.makeText(getActivity(), "Nhập Đúng", Toast.LENGTH_SHORT).show();
-//                }
+                }
             }
         });
     }
@@ -385,24 +392,40 @@ public class Hoa_DonFragment extends Fragment {
 
     public int validate() {
         int check = 1;
-        if (edtTenHopDong.getText().length() == 0 ) {
-            edtTenHopDong.setError("Nhập tháng thu tiền");
+        if (edtTenHopDong.getText().length() == 0) {
+            errorThangThu.setVisibility(View.VISIBLE);
             check = -1;
+        } else {
+            errorThangThu.setVisibility(View.GONE);
         }
-        if(tvMAKT.getText().length()==0) {
-            Toast.makeText(getActivity(), "Vui lòng chọn phòng", Toast.LENGTH_SHORT).show();
-            check=-1;
+
+        if (tvMAKT.getText().length() == 0) {
+            errorP.setVisibility(View.VISIBLE);
+            check = -1;
+        } else {
+            errorP.setVisibility(View.GONE);
         }
-        if(tvmaDichVu.getText().length()==0) {
-            Toast.makeText(getActivity(), "Vui lòng chọn dịch vụ", Toast.LENGTH_SHORT).show();
-            check=-1;
+
+        if (tvmaDichVu.getText().length() == 0) {
+            errorDV.setVisibility(View.VISIBLE);
+            check = -1;
+        } else {
+            errorDV.setVisibility(View.GONE);
         }
-        if(tvNgayThu.getText().length()==0) {
+        if (tvNgayThu.getText().length() == 0) {
             errorNgayThu.setVisibility(View.VISIBLE);
-            check=-1;
+            check = -1;
         } else {
             errorNgayThu.setVisibility(View.GONE);
         }
+
+        if(tvTrangThai.getText().length()==0) {
+            errorTT.setVisibility(View.VISIBLE);
+            check=-1;
+        } else {
+            errorTT.setVisibility(View.GONE);
+        }
+
         return check;
     }
 
@@ -411,4 +434,4 @@ public class Hoa_DonFragment extends Fragment {
         adapter = new HoaDon_Adapter(getContext(), this, (ArrayList<HoaDon>) listHoaDon);
         lvHoaDon.setAdapter(adapter);
     }
-}
+    }

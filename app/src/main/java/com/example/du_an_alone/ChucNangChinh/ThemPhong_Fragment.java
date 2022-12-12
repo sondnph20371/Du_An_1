@@ -129,6 +129,9 @@ public class ThemPhong_Fragment extends Fragment {
                 Log.i("demo" , "posPhong"+position);
                 spinner.setSelection(position);
             }
+
+
+
         }
         btnHuyphong.setOnClickListener(new View.OnClickListener() {
             @Override

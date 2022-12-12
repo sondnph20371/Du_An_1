@@ -35,7 +35,7 @@ public class PhongDAO {
         values.put("TENPHONG" , phong.getTenPhong());
         values.put("DIENTICHPHONG" , phong.getDienTichPhong());
         values.put("GIAPHONG" , phong.getGiaPhong());
-        values.put("TRANGTHAITIENCOC" , phong.getTrangThaiTienCoc());
+//        values.put("TRANGTHAITIENCOC" , phong.getTrangThaiTienCoc());
         values.put("TENLOAIPHONG" , phong.getTenLoaiPhong());
         long row = database.update("PHONG" , values , "MAPHONG = ?" , new String[]{String.valueOf(phong.getId())});
         return row>0;

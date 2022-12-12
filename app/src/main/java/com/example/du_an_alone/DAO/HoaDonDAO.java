@@ -51,7 +51,7 @@ public class HoaDonDAO {
         values.put("VESINH", hoaDon.getVeSinh());
         values.put("GUIXE", hoaDon.getGuiXe());
         values.put("WIFI", hoaDon.getWifi());
-        values.put("TIENPHONG", hoaDon.getTienPhong());
+        values.put("GIAPHONG", hoaDon.getTienPhong());
         values.put("TONGTIEN", hoaDon.getTongTienThanhToan());
         values.put("TRANGTHAITHANHTOAN", hoaDon.getTrangThai());
         long row = database.update("HOADON", values, "MAHOADON=?", new String[]{hoaDon.getMaHoaDon() + ""});

@@ -63,7 +63,7 @@ public class HoaDon_Adapter extends ArrayAdapter<HoaDon> {
             tienDien.setText("Tiền Điện: "+hoaDon.getSoDien()+" VND");
             Log.d("zzzzzzzzzzzzztiendien", hoaDon.getSoDien()+"");
             tienNuoc = view.findViewById(R.id.txttiennuoc_itemhoadon);
-            tienNuoc.setText("Giá Vệ Sinh: "+hoaDon.getSoNuoc()+" VND");
+            tienNuoc.setText("Tiền nước: "+hoaDon.getSoNuoc()+" VND");
             Log.d("zzzzzzzzzzzzztiennuoc", hoaDon.getSoNuoc()+"");
             tienVeSinh = view.findViewById(R.id.txttienvesinh_itemhoadon);
             tienVeSinh.setText("Tiền Vệ Sinh: "+hoaDon.getVeSinh()+" VND");

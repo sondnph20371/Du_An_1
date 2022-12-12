@@ -23,6 +23,16 @@
         android:background="@drawable/custom_edtkhachthue"
         android:textAlignment="center"
         android:id="@+id/edtTenHopDOng_dialogHoaDon"/>
+
+    <TextView
+        android:id="@+id/dialogHoaDon_errorThangThu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhập tháng thu tiền"
+        android:textColor="#FF0000"
+        android:layout_margin="5dp"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -47,6 +57,18 @@
             app:icon="@drawable/outline_add_circle_black_36"
             app:iconSize="25dp"
             app:iconTint="#F44336"/>
+
+        <TextView
+            android:id="@+id/dialogHoaDon_errorP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa chọn phòng"
+            android:textColor="#FF0000"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
     </LinearLayout>
 
     <LinearLayout
@@ -254,6 +276,20 @@
             app:icon="@drawable/outline_add_circle_black_36"
             app:iconSize="25dp"
             app:iconTint="#F44336"/>
+
+        <TextView
+            android:id="@+id/dialogHoaDon_errorDV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bạn chưa chọn dịch vụ"
+            android:textColor="#FF0000"
+            android:textSize="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -401,13 +437,28 @@
             android:text="Trạng Thái: "
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
-        <TextView
-            android:layout_margin="5dp"
-            android:textSize="15dp"
-            android:id="@+id/tvHD_TRANGTHAI_Add"
-            android:text="Chưa Thanh Toán"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+       <LinearLayout
+           android:layout_width="160dp"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_gravity="center"
+           >
+           <TextView
+               android:layout_margin="5dp"
+               android:textSize="15dp"
+               android:id="@+id/tvHD_TRANGTHAI_Add"
+               android:text=""
+               android:layout_width="130dp"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:id="@+id/dialogHoaDon_errorTT"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Bạn chưa chọn trạng thái"
+               android:textColor="#FF0000"
+               android:visibility="gone"/>
+       </LinearLayout>
         <Button
             android:id="@+id/btnHD_True_Add"
             android:layout_width="50dp"

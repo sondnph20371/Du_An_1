@@ -27,11 +27,13 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dangKi_ipTK"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:drawablePadding="12dp"
-
             app:boxStrokeColor="#F44336"
             app:endIconTint="#00FFFFFF"
             app:hintTextColor="#F44336"
@@ -57,6 +59,12 @@
             app:endIconTint="#00FFFFFF"
             app:hintTextColor="#F44336"
             app:startIconTint="#F44336"
+            android:id="@+id/dangKi_ipMK"
+            app:errorEnabled="true"
+            app:counterEnabled="true"
+            app:counterTextColor="@color/white"
+
+            app:errorTextColor="@color/white"
             >
 
             <com.google.android.material.textfield.TextInputEditText
@@ -79,6 +87,10 @@
             app:endIconTint="#00FFFFFF"
             app:hintTextColor="#F44336"
             app:startIconTint="#F44336"
+            android:id="@+id/dangKi_ipRepass"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/white"
+
             >
 
             <com.google.android.material.textfield.TextInputEditText
