@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã Hợp Đồng"
+        android:textColor="#E91E63"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:id="@+id/txtMaHopDong"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mã Khách Thuê"
+        android:textStyle="bold"
+        android:id="@+id/txtMaKhachThue"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/txttenkhachthue"
+        android:text="Tên Khách Thuê" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtmaphong"
+        android:text="Mã Phòng"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:id="@+id/txtTenPhong"
+        android:text="Tên Phòng"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Giá Phòng"
+        android:textStyle="bold"
+        android:id="@+id/txtGiaTien"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiền Cọc"
+        android:textStyle="bold"
+        android:id="@+id/txtTienCoc"/>
+
+</LinearLayout>

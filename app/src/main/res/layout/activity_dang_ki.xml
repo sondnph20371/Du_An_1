@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".Function_Login.DangKi">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Đăng Kí"
+        android:textColor="#000000"
+        android:layout_margin="20dp"
+        android:textStyle="bold"
+        android:textSize="30dp" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="12dp"
+
+            app:boxStrokeColor="#F44336"
+            app:endIconTint="#00FFFFFF"
+            app:hintTextColor="#F44336"
+            app:startIconTint="#F44336">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edAddTaiKhoan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/ic_person_24"
+                android:drawablePadding="12dp"
+                android:hint="Nhập Tài Khoản" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="12dp"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="#F44336"
+            app:endIconTint="#00FFFFFF"
+            app:hintTextColor="#F44336"
+            app:startIconTint="#F44336"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edAddMatKhau"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="12dp"
+                android:hint="Nhập Mật Khẩu"
+                android:background="@drawable/custom_input"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:drawablePadding="12dp"
+            app:passwordToggleEnabled="true"
+            app:boxStrokeColor="#F44336"
+            app:endIconTint="#00FFFFFF"
+            app:hintTextColor="#F44336"
+            app:startIconTint="#F44336"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edNhapLaiMK"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:drawableStart="@drawable/ic_baseline_lock_24"
+                android:drawablePadding="12dp"
+                android:hint="Nhập Lại Mật Khẩu"
+                android:background="@drawable/custom_input"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:backgroundTint="#F44336"
+            android:id="@+id/btnNext_DK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Tiếp Theo"
+            app:icon="@drawable/ic_baseline_navigate_next_24"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/google"/>
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/fb"/>
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="20dp"
+            android:src="@drawable/twitter"/>
+    </LinearLayout>
+</LinearLayout>

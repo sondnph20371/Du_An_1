@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ChucNangChinh.LoaiPhong_Activity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh Sách Loại Phòng"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:padding="20dp"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:background="#4CAF50"
+        />
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="#FFEB3B"
+          android:orientation="horizontal">
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="STT "
+              android:paddingLeft="5dp"
+              android:textSize="20sp"
+              android:textStyle="bold"
+              android:textColor="#000000"/>
+          <TextView
+              android:layout_width="120dp"
+              android:layout_height="wrap_content"
+              android:text="Loại Phòng "
+              android:paddingLeft="10dp"
+              android:textSize="20sp"
+              android:layout_weight="1"
+              android:textStyle="bold"
+              android:textAlignment="center"
+              android:textColor="#000000"/>
+      </LinearLayout>
+      <ListView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_marginTop="30dp"
+          android:background="@drawable/bg3"
+          android:id="@+id/lvloaiphong"/>
+
+  </FrameLayout>
+</LinearLayout>

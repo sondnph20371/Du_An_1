@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#5D939A"
+        android:backgroundTintMode="screen"
+        android:orientation="vertical">
+           <Spinner
+               android:id="@+id/spinner_Phong"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_margin="20dp"
+               />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mã Phòng : "
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#000000"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mã Phòng"
+                android:textColorHint="#F44336"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/edtmaphong_Phong"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên Phòng : "
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#000000"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dialogPhong_InputTen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#F44336"
+                android:layout_marginLeft="20dp"
+                app:errorEnabled="true"
+                android:layout_marginRight="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edttenphong_Phong"
+                    android:hint="Tên Phòng"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diện Tích Phòng : "
+                android:layout_marginLeft="5dp"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:textColor="#000000"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dialogPhong_InputDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#F44336"
+                app:errorEnabled="true"
+                android:layout_marginRight="20dp">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/edtdientichphong_Phong"
+                    android:inputType="number"
+                    android:hint="Diện Tích Phòng/m2"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Giá Phòng : "
+                android:textColor="#000000"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dialogPhong_InputGia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                app:errorEnabled="true"
+                android:textColorHint="#F44336">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtdongiaphong_Phong"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="Đơn Giá Phòng/VNĐ" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thêm Phòng"
+                android:layout_margin="10dp"
+                app:icon="@drawable/outline_edit_black_20"
+                android:id="@+id/btnThemPhong_Phong"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:layout_margin="10dp"
+                app:icon="@android:drawable/btn_dialog"
+                android:id="@+id/btnHuyPhong_Phong"
+                android:layout_weight="1"
+                android:backgroundTint="#F44336"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

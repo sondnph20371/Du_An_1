@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/icontrangchu"
+            android:title="Trang Chủ" />
+        <item android:title="Thao Tác Nhà Trọ">
+            <menu>
+
+                <item
+                    android:id="@+id/nav_loaiphong"
+                    android:icon="@drawable/iconloaiphong"
+                    android:title="Thêm Loại Phòng" />
+                <item
+                    android:id="@+id/nav_phong"
+                    android:icon="@drawable/iconphong"
+                    android:title="Thêm Phòng" />
+                <item
+                    android:id="@+id/nav_dichvu"
+                    android:icon="@drawable/icondichvu"
+                    android:title="Thêm Dịch Vụ" />
+                <!--    <item-->
+                <!--        android:title="Thêm Dịch Vụ Chi Tiết"-->
+                <!--        android:id="@+id/nav_dichvuCT"-->
+                <!--        />-->
+                <item
+                    android:id="@+id/nav_khachthue"
+                    android:icon="@drawable/iconkhachthue"
+                    android:title="Thêm Khách Thuê" />
+                <item
+                    android:id="@+id/nav_hopdong"
+                    android:icon="@drawable/iconhopdong"
+                    android:title="Thêm Hợp Đồng" />
+                <item
+                    android:id="@+id/nav_hoadon"
+                    android:icon="@drawable/iconhoadon"
+                    android:title="Thêm Hóa Hóa Đơn" />
+
+            </menu>
+
+
+        </item>
+
+        <item android:title="Quản lí nhanh">
+            <menu >
+                <item
+                    android:id="@+id/nav_thongke"
+                    android:icon="@drawable/ic_baseline_bar_chart_24"
+                    android:title="Thống Kê" />
+
+                <item android:id="@+id/nav_thanhLi"
+                    android:title="Thanh lí phòng"
+                    android:icon="@drawable/ic_baseline_next_plan_24"/>
+            </menu>
+
+        </item>
+
+        <item android:title="Tài Khoản">
+            <menu>
+                <item
+                    android:id="@+id/nav_dangxuat"
+                    android:icon="@drawable/icondangxuat"
+                    android:title="Đăng Xuất" />
+                <item
+                    android:id="@+id/nav_dangky"
+                    android:icon="@drawable/icondangky"
+                    android:title="Đăng Ký Tài Khoản Mới" />
+            </menu>
+        </item>
+    </group>
+</menu>

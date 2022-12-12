@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmentHopDong"
+    android:background="#D6FAFF"
+    tools:context=".ChucNangChinh.HopDong_Fragment">
+<!--   <TextView-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content"-->
+<!--       android:text="Hợp Đồng Trọ"-->
+<!--       android:textColor="#000000"-->
+<!--       android:textAlignment="center"-->
+<!--       android:padding="20dp"-->
+<!--       android:textSize="30dp"-->
+<!--       android:textStyle="italic"-->
+<!--       android:background="#F44336"-->
+<!--       />-->
+   <ListView
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/lvhopdong"/>
+   <ImageView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:layout_gravity="bottom|right"
+      android:id="@+id/fab_hopdong"
+      android:src="@drawable/btnhopdong"
+      android:layout_margin="20dp"/>
+
+</FrameLayout>

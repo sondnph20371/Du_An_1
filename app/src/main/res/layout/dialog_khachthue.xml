@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edtmakhachthue_dialogKhachthue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/edttenkhachthue_dialogKhachthue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/custom_edtkhachthue"
+                    android:drawablePadding="20dp"
+                    android:hint="Họ Tên"
+                    android:drawableStart="@drawable/hoten"
+                    android:padding="20dp"
+                    android:textColor="#000000"
+                    android:textColorHint="#000000" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtgioitinhkhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="Giới Tính"
+            android:drawableStart="@drawable/gioitinh"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/edtngaysinhkhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="Ngày Sinh"
+            android:drawableStart="@drawable/ngaysinh"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"/>
+        <EditText
+            android:id="@+id/edtCCCDkhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="CCCD"
+            android:inputType="number"
+            android:drawableStart="@drawable/cccd"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/edtquequankhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="Quê Quán"
+            android:drawableStart="@drawable/quehuong"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000" />
+        <EditText
+            android:id="@+id/edtsodienthoaikhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="Số Điện Thoại"
+            android:inputType="number"
+            android:drawableStart="@drawable/phone"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"/>
+        <EditText
+            android:id="@+id/edtnghenghiepkhachthue_dialogKhachthue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/nghenghiep"
+            android:background="@drawable/custom_edtkhachthue"
+            android:drawablePadding="20dp"
+            android:hint="Nghề Nghiệp"
+            android:padding="20dp"
+            android:textColor="#000000"
+            android:textColorHint="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:id="@+id/btnthemkhachthue_btnAdd"
+                android:backgroundTint="#F44336"
+                android:text="Lưu"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:backgroundTint="#F44336"
+                android:id="@+id/btnhuykhachthue_btnHuy"
+                android:text="hủy"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
